@@ -8,7 +8,6 @@ def cache(func: Callable) -> Callable:
         if args in storage:
             print("Gatting from cache")
             return storage[args]
-        
         print("Calculating new result")
         result = func(*args)
         storage[args] = result
